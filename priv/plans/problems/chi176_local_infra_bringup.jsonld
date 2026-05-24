@@ -1,0 +1,233 @@
+{
+  "@context": {
+    "khr": "https://registry.khronos.org/glTF/extensions/2.0/KHR_interactivity/",
+    "domain": "khr:planning/domain/"
+  },
+  "@type": "domain:Problem",
+  "name": "chi176_local_infra_bringup",
+  "source": "service_bringup",
+  "description": "Fresh local-dev bring-up of the V-Sekai infra for Linear CHI-176 (Finish V-Sekai project Part 1). Seven items (idtx_flow, crdb, baker, uro, zone_a, zone_b, obs) on a single workstation via launchd plists + native binaries (no Docker, no Kubernetes). The problem supplies: the item set, per-service descriptions, per-service dependency wrapper methods (complete_uro depends on complete_crdb and complete_baker, etc.), the win condition, and the top-level tasks. The domain (service_bringup) supplies only the abstract phase walk + verification primitives.",
+  "linear": {
+    "issue": "CHI-176",
+    "url": "https://linear.app/chibifire/issue/CHI-176/finish-parts-of-the-v-sekai-project-or-it-will-haunt-me-part-1",
+    "gitBranchName": "feature/chi-176-finish-parts-of-the-v-sekai-project-or-it-will-haunt-me-part",
+    "priority": "Urgent",
+    "blocks": ["CHI-180"],
+    "blockedBy": ["CHI-221"]
+  },
+  "stack": {
+    "idtx_flow": "OpenUSD Godot adapter (https://github.com/v-sekai-multiplayer-fabric/idtx-flow-v-sekai); imports .usda → .escn and exports .escn → .usda; build-time dependency baker links against. Tracked by CHI-254.",
+    "uro": "Elixir/Phoenix; `mix phx.server` via launchd; uro-ZZZZ.chibifire.com; 2.0 GB",
+    "crdb": "CockroachDB single-node via Homebrew (cockroachdb/tap/cockroach); reachable only by uro; crdb-WWWW.chibifire.com; 2.0 GB; certs under secrets/local/",
+    "zone_a": "Native Godot headless from multiplayer-fabric-godot fork; binds UDP :4433 (no root needed for :443); zone-XXXX.chibifire.com; 2.0 GB",
+    "zone_b": "Second zone server, identical to zone_a but distinct UDP port and plist label",
+    "baker": "Native binary; watches local inbox/ directory; converts incoming USD via idtx_flow then writes to local casync-seed/; baker-AAAA.chibifire.com; 2.0 GB",
+    "obs": "otelcol-contrib via Homebrew; OTLP receivers on default ports; obs-AAAA.chibifire.com; 2.0 GB"
+  },
+  "pass_conditions": {
+    "idtx_flow_roundtrip_ok": "idtx-flow-v-sekai CI passes: a fixture .usda imports to .escn and exports back to .usda with no diff (CHI-254 acceptance)",
+    "crdb_sql_ok": "`cockroach sql --certs-dir=secrets/local -e 'SELECT 1'` returns a row",
+    "baker_inbox_ok": "drop a fixture .usda into inbox/, observe .scn seed written under casync-seed/ within 5 s",
+    "uro_http_ok": "`curl -s http://localhost:4000/health` returns 200 and uro logs show CRDB connection accepted",
+    "zone_a_udp_ok": "`nc -uvz 127.0.0.1 4433` reports open; WebTransport handshake completes",
+    "zone_b_udp_ok": "second zone responds on its bound UDP port",
+    "obs_otlp_ok": "OTLP HTTP receiver on 4318 accepts a synthetic span via curl"
+  },
+  "win_condition": "All seven items at phase=3, all seven stack_ready flags up, all seven pass_conditions met. Data-flow chain end-to-end verified: drop a .usda into baker's inbox → uro serves the converted bundle over HTTP → zone_a/zone_b instance it; crdb only reached via uro.",
+  "dataflow": "idtx_flow (build-time, CHI-254) → baker (CHI-247, produces .scn seeds) → uro CDN (depends on crdb for metadata) → zone_a/zone_b (pull scenes from uro, CHI-248). obs is independent observability infra.",
+  "variables": [
+    {
+      "name": "phase",
+      "init": {
+        "idtx_flow": 0,
+        "crdb": 0,
+        "baker": 0,
+        "uro": 0,
+        "zone_a": 0,
+        "zone_b": 0,
+        "obs": 0
+      }
+    },
+    {
+      "name": "stack_ready",
+      "init": {
+        "idtx_flow": 0,
+        "crdb": 0,
+        "baker": 0,
+        "uro": 0,
+        "zone_a": 0,
+        "zone_b": 0,
+        "obs": 0
+      }
+    },
+    {
+      "name": "pass_condition",
+      "init": {
+        "idtx_flow_roundtrip_ok": 0,
+        "crdb_sql_ok": 0,
+        "baker_inbox_ok": 0,
+        "uro_http_ok": 0,
+        "zone_a_udp_ok": 0,
+        "zone_b_udp_ok": 0,
+        "obs_otlp_ok": 0
+      }
+    }
+  ],
+  "methods": {
+    "complete_idtx_flow": {
+      "alternatives": [
+        {
+          "name": "done",
+          "check": [{"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/phase/idtx_flow"}, "b": 3}}],
+          "subtasks": []
+        },
+        {
+          "name": "direct",
+          "subtasks": [
+            ["complete_item", "idtx_flow"],
+            ["a_set_stack_ready", "idtx_flow", "ifire"],
+            ["a_verify_pass", "idtx_flow_roundtrip_ok", "ifire"]
+          ]
+        }
+      ]
+    },
+    "complete_crdb": {
+      "alternatives": [
+        {
+          "name": "done",
+          "check": [{"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/phase/crdb"}, "b": 3}}],
+          "subtasks": []
+        },
+        {
+          "name": "direct",
+          "subtasks": [
+            ["complete_item", "crdb"],
+            ["a_set_stack_ready", "crdb", "ifire"],
+            ["a_verify_pass", "crdb_sql_ok", "ifire"]
+          ]
+        }
+      ]
+    },
+    "complete_baker": {
+      "alternatives": [
+        {
+          "name": "done",
+          "check": [{"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/phase/baker"}, "b": 3}}],
+          "subtasks": []
+        },
+        {
+          "name": "direct",
+          "subtasks": [
+            ["complete_idtx_flow"],
+            ["complete_item", "baker"],
+            ["a_set_stack_ready", "baker", "ifire"],
+            ["a_verify_pass", "baker_inbox_ok", "ifire"]
+          ]
+        }
+      ]
+    },
+    "complete_uro": {
+      "alternatives": [
+        {
+          "name": "done",
+          "check": [{"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/phase/uro"}, "b": 3}}],
+          "subtasks": []
+        },
+        {
+          "name": "direct",
+          "subtasks": [
+            ["complete_crdb"],
+            ["complete_baker"],
+            ["complete_item", "uro"],
+            ["a_set_stack_ready", "uro", "ifire"],
+            ["a_verify_pass", "uro_http_ok", "ifire"]
+          ]
+        }
+      ]
+    },
+    "complete_zone_a": {
+      "alternatives": [
+        {
+          "name": "done",
+          "check": [{"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/phase/zone_a"}, "b": 3}}],
+          "subtasks": []
+        },
+        {
+          "name": "direct",
+          "subtasks": [
+            ["complete_uro"],
+            ["complete_item", "zone_a"],
+            ["a_set_stack_ready", "zone_a", "ifire"],
+            ["a_verify_pass", "zone_a_udp_ok", "ifire"]
+          ]
+        }
+      ]
+    },
+    "complete_zone_b": {
+      "alternatives": [
+        {
+          "name": "done",
+          "check": [{"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/phase/zone_b"}, "b": 3}}],
+          "subtasks": []
+        },
+        {
+          "name": "direct",
+          "subtasks": [
+            ["complete_uro"],
+            ["complete_item", "zone_b"],
+            ["a_set_stack_ready", "zone_b", "ifire"],
+            ["a_verify_pass", "zone_b_udp_ok", "ifire"]
+          ]
+        }
+      ]
+    },
+    "complete_obs": {
+      "alternatives": [
+        {
+          "name": "done",
+          "check": [{"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/phase/obs"}, "b": 3}}],
+          "subtasks": []
+        },
+        {
+          "name": "direct",
+          "subtasks": [
+            ["complete_item", "obs"],
+            ["a_set_stack_ready", "obs", "ifire"],
+            ["a_verify_pass", "obs_otlp_ok", "ifire"]
+          ]
+        }
+      ]
+    },
+    "check_win_condition": {
+      "alternatives": [
+        {
+          "name": "won",
+          "check": [
+            {"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/stack_ready/idtx_flow"}, "b": 1}},
+            {"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/stack_ready/crdb"}, "b": 1}},
+            {"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/stack_ready/baker"}, "b": 1}},
+            {"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/stack_ready/uro"}, "b": 1}},
+            {"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/stack_ready/zone_a"}, "b": 1}},
+            {"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/stack_ready/zone_b"}, "b": 1}},
+            {"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/stack_ready/obs"}, "b": 1}},
+            {"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/pass_condition/idtx_flow_roundtrip_ok"}, "b": 1}},
+            {"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/pass_condition/crdb_sql_ok"}, "b": 1}},
+            {"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/pass_condition/baker_inbox_ok"}, "b": 1}},
+            {"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/pass_condition/uro_http_ok"}, "b": 1}},
+            {"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/pass_condition/zone_a_udp_ok"}, "b": 1}},
+            {"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/pass_condition/zone_b_udp_ok"}, "b": 1}},
+            {"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/pass_condition/obs_otlp_ok"}, "b": 1}}
+          ],
+          "subtasks": []
+        },
+        {"name": "not_yet", "subtasks": []}
+      ]
+    }
+  },
+  "tasks": [
+    ["complete_zone_a"],
+    ["complete_zone_b"],
+    ["complete_obs"],
+    ["check_win_condition"]
+  ]
+}
