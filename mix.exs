@@ -1,11 +1,24 @@
 defmodule Taskweft.Plans.MixProject do
   use Mix.Project
 
+  @version "0.2.0-dev.0"
+
   def project do
     [
       app: :taskweft_plans,
-      version: "0.1.0",
-      elixir: "~> 1.17"
+      version: @version,
+      elixir: "~> 1.17",
+      description: "JSON-LD HTN planning domains and problems for Taskweft",
+      package: package(),
+      source_url: "https://github.com/taskweft/plans"
+    ]
+  end
+
+  defp package do
+    [
+      files: ~w(priv mix.exs LICENSE*),
+      licenses: ["MIT"],
+      links: %{"GitHub" => "https://github.com/taskweft/plans"}
     ]
   end
 end
