@@ -10,7 +10,14 @@ defmodule Taskweft.Plans.MixProject do
       elixir: "~> 1.17",
       description: "JSON-LD HTN planning domains and problems for Taskweft",
       package: package(),
-      source_url: "https://github.com/taskweft/plans"
+      source_url: "https://github.com/taskweft/plans",
+      deps: deps()
+    ]
+  end
+
+  defp deps do
+    [
+      {:ex_doc, ">= 0.0.0", only: :dev, runtime: false}
     ]
   end
 
