@@ -16,6 +16,7 @@ defmodule Taskweft.Plans.MixProject do
 
   defp package do
     [
+      organization: "chibifire",
       files: ~w(priv mix.exs LICENSE*),
       licenses: ["MIT"],
       links: %{"GitHub" => "https://github.com/taskweft/plans"}
