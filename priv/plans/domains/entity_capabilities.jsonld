@@ -32,40 +32,34 @@
         "human_2": 0,
         "amphibious_1": 5
       }
-    },
-    {
-      "name": "capabilities",
-      "type": "ref",
-      "description": "ReBAC HAS_CAPABILITY edges: each entity holds the capabilities listed.",
-      "init": {
-        "description": "ReBAC HAS_CAPABILITY edges: each entity holds the capabilities listed. Action guards require the agent to hold all listed capabilities for that action.",
-        "entities": {
-          "drone_1": [
-            "fly"
-          ],
-          "drone_2": [
-            "fly"
-          ],
-          "boat_1": [
-            "swim"
-          ],
-          "boat_2": [
-            "swim"
-          ],
-          "human_1": [
-            "walk"
-          ],
-          "human_2": [
-            "walk"
-          ],
-          "amphibious_1": [
-            "swim",
-            "walk"
-          ]
-        }
-      }
     }
   ],
+  "capabilities": {
+    "entities": {
+      "drone_1": [
+        "fly"
+      ],
+      "drone_2": [
+        "fly"
+      ],
+      "boat_1": [
+        "swim"
+      ],
+      "boat_2": [
+        "swim"
+      ],
+      "human_1": [
+        "walk"
+      ],
+      "human_2": [
+        "walk"
+      ],
+      "amphibious_1": [
+        "swim",
+        "walk"
+      ]
+    }
+  },
   "actions": {
     "a_fly": {
       "description": "Aerial movement. Requires fly capability. Fast — no terrain restrictions.",
