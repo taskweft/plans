@@ -32,14 +32,18 @@
       }
     }
   ],
-  "goals": [
+  "todo_list": [
     {
-      "pointer": "/loc/alice",
-      "eq": 2
-    },
-    {
-      "pointer": "/loc/bob",
-      "eq": 2
+      "goal": [
+        {
+          "pointer": "/loc/alice",
+          "eq": 2
+        },
+        {
+          "pointer": "/loc/bob",
+          "eq": 2
+        }
+      ]
     }
   ]
 }

@@ -29,7 +29,10 @@
     "a_inventory_gates": {
       "params": [],
       "body": [
-        {"pointer/set": "/sections_drafted/gate_inventory", "value": true}
+        {
+          "pointer/set": "/sections_drafted/gate_inventory",
+          "value": true
+        }
       ]
     },
     "a_apply_overlap_ratio": {
@@ -38,11 +41,17 @@
         {
           "eval": {
             "type": "math/eq",
-            "a": {"type": "pointer/get", "pointer": "/sections_drafted/gate_inventory"},
+            "a": {
+              "type": "pointer/get",
+              "pointer": "/sections_drafted/gate_inventory"
+            },
             "b": true
           }
         },
-        {"pointer/set": "/sections_drafted/overlap_ratio", "value": true}
+        {
+          "pointer/set": "/sections_drafted/overlap_ratio",
+          "value": true
+        }
       ]
     },
     "a_apply_verification_amplification": {
@@ -51,11 +60,17 @@
         {
           "eval": {
             "type": "math/eq",
-            "a": {"type": "pointer/get", "pointer": "/sections_drafted/gate_inventory"},
+            "a": {
+              "type": "pointer/get",
+              "pointer": "/sections_drafted/gate_inventory"
+            },
             "b": true
           }
         },
-        {"pointer/set": "/sections_drafted/verification_amplification", "value": true}
+        {
+          "pointer/set": "/sections_drafted/verification_amplification",
+          "value": true
+        }
       ]
     },
     "a_apply_deterministic_ceiling": {
@@ -64,11 +79,17 @@
         {
           "eval": {
             "type": "math/eq",
-            "a": {"type": "pointer/get", "pointer": "/sections_drafted/gate_inventory"},
+            "a": {
+              "type": "pointer/get",
+              "pointer": "/sections_drafted/gate_inventory"
+            },
             "b": true
           }
         },
-        {"pointer/set": "/sections_drafted/deterministic_ceiling", "value": true}
+        {
+          "pointer/set": "/sections_drafted/deterministic_ceiling",
+          "value": true
+        }
       ]
     },
     "a_apply_liveness_constraint": {
@@ -77,11 +98,17 @@
         {
           "eval": {
             "type": "math/eq",
-            "a": {"type": "pointer/get", "pointer": "/sections_drafted/gate_inventory"},
+            "a": {
+              "type": "pointer/get",
+              "pointer": "/sections_drafted/gate_inventory"
+            },
             "b": true
           }
         },
-        {"pointer/set": "/sections_drafted/liveness_constraint", "value": true}
+        {
+          "pointer/set": "/sections_drafted/liveness_constraint",
+          "value": true
+        }
       ]
     },
     "a_synthesize_recommendations": {
@@ -90,32 +117,47 @@
         {
           "eval": {
             "type": "math/eq",
-            "a": {"type": "pointer/get", "pointer": "/sections_drafted/overlap_ratio"},
+            "a": {
+              "type": "pointer/get",
+              "pointer": "/sections_drafted/overlap_ratio"
+            },
             "b": true
           }
         },
         {
           "eval": {
             "type": "math/eq",
-            "a": {"type": "pointer/get", "pointer": "/sections_drafted/verification_amplification"},
+            "a": {
+              "type": "pointer/get",
+              "pointer": "/sections_drafted/verification_amplification"
+            },
             "b": true
           }
         },
         {
           "eval": {
             "type": "math/eq",
-            "a": {"type": "pointer/get", "pointer": "/sections_drafted/deterministic_ceiling"},
+            "a": {
+              "type": "pointer/get",
+              "pointer": "/sections_drafted/deterministic_ceiling"
+            },
             "b": true
           }
         },
         {
           "eval": {
             "type": "math/eq",
-            "a": {"type": "pointer/get", "pointer": "/sections_drafted/liveness_constraint"},
+            "a": {
+              "type": "pointer/get",
+              "pointer": "/sections_drafted/liveness_constraint"
+            },
             "b": true
           }
         },
-        {"pointer/set": "/sections_drafted/synthesis_recommendations", "value": true}
+        {
+          "pointer/set": "/sections_drafted/synthesis_recommendations",
+          "value": true
+        }
       ]
     },
     "a_publish_audit": {
@@ -124,11 +166,17 @@
         {
           "eval": {
             "type": "math/eq",
-            "a": {"type": "pointer/get", "pointer": "/sections_drafted/synthesis_recommendations"},
+            "a": {
+              "type": "pointer/get",
+              "pointer": "/sections_drafted/synthesis_recommendations"
+            },
             "b": true
           }
         },
-        {"pointer/set": "/audit_published/doc_committed", "value": true}
+        {
+          "pointer/set": "/audit_published/doc_committed",
+          "value": true
+        }
       ]
     }
   },
@@ -139,19 +187,35 @@
         {
           "name": "inventory_then_four_properties_then_synth_then_publish",
           "subtasks": [
-            ["a_inventory_gates"],
-            ["a_apply_overlap_ratio"],
-            ["a_apply_verification_amplification"],
-            ["a_apply_deterministic_ceiling"],
-            ["a_apply_liveness_constraint"],
-            ["a_synthesize_recommendations"],
-            ["a_publish_audit"]
+            [
+              "a_inventory_gates"
+            ],
+            [
+              "a_apply_overlap_ratio"
+            ],
+            [
+              "a_apply_verification_amplification"
+            ],
+            [
+              "a_apply_deterministic_ceiling"
+            ],
+            [
+              "a_apply_liveness_constraint"
+            ],
+            [
+              "a_synthesize_recommendations"
+            ],
+            [
+              "a_publish_audit"
+            ]
           ]
         }
       ]
     }
   },
-  "tasks": [
-    ["write_trust_topology_audit"]
+  "todo_list": [
+    [
+      "write_trust_topology_audit"
+    ]
   ]
 }

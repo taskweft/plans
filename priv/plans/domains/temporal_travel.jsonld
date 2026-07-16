@@ -6,7 +6,7 @@
   "@type": "domain:Definition",
   "name": "temporal_travel",
   "version": "1.0",
-  "description": "Travel planning domain with temporal action durations (ISO 8601). Agents can walk directly or use a taxi: call, ride, then pay. Demonstrates multi-step sequential task decomposition (RECTGTN 'T') and temporal metadata \u2014 each action carries a 'duration' field usable by a Simple Temporal Network (STN) to check schedule feasibility. Duration values follow ISO 8601 (PT = period-time prefix: PTxH = hours, PTxM = minutes).",
+  "description": "Travel planning domain with temporal action durations (ISO 8601). Agents can walk directly or use a taxi: call, ride, then pay. Demonstrates multi-step sequential task decomposition (RECTGTN 'T') and temporal metadata — each action carries a 'duration' field usable by a Simple Temporal Network (STN) to check schedule feasibility. Duration values follow ISO 8601 (PT = period-time prefix: PTxH = hours, PTxM = minutes).",
   "enums": {
     "location": {
       "home_a": 0,
@@ -241,7 +241,7 @@
       ]
     }
   },
-  "tasks": [
+  "todo_list": [
     [
       "travel",
       "alice",

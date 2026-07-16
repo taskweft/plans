@@ -73,7 +73,7 @@
   },
   "actions": {
     "a_fly": {
-      "description": "Aerial movement. Requires fly capability. Fast \u2014 no terrain restrictions.",
+      "description": "Aerial movement. Requires fly capability. Fast — no terrain restrictions.",
       "duration": "PT5M",
       "params": [
         "agent",
@@ -177,7 +177,7 @@
       ]
     }
   },
-  "tasks": [
+  "todo_list": [
     [
       "m_move",
       "drone_1",

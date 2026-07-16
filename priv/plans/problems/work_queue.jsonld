@@ -68,20 +68,48 @@
     {
       "name": "phase",
       "init": {
-        "lean4_infra": 3, "zone_arch": 3, "monorepo_split": 3, "taskweft": 3,
-        "operator_camera": 3, "reduce_merge": 3, "rebac_enforcement": 3,
-        "domain_jsonld": 3, "sqlite_journal": 3, "zone_registry": 3,
-        "build_cache": 3, "operator_overlay": 3, "asset_delivery": 3,
-        "baker_lifecycle": 3, "rectgtn_behavior": 3, "zone_border_handoff": 3,
-        "taskweft_lean_proofs": 3, "taskweft_perf": 3, "openxr_simulator": 3,
-        "isolated_submodule": 0, "vr_import_cache": 3, "vr_lasso_test": 3,
-        "vr_lasso_s2h": 3, "vr_lasso_poi_reg": 3, "vr_lasso_query_pass": 0,
-        "vr_call_gui_routing": 0, "vr_btn_pressed": 0, "vr_slider_value": 0,
-        "zone_manifest": 0, "concert_archetype": 0, "ragdoll_archetype": 0,
-        "pcvr_player": 0, "sandbox_rebac": 0, "artifactsmmog_bot": 0,
-        "convoy_chokepoint": 0, "jellyfish_demo": 0, "headless_observer": 0,
-        "headless_matrix": 0, "otel_tracing": 0, "godot_otel_module": 3,
-        "turboquant_llm": 0, "gepa_cycle": 0
+        "lean4_infra": 3,
+        "zone_arch": 3,
+        "monorepo_split": 3,
+        "taskweft": 3,
+        "operator_camera": 3,
+        "reduce_merge": 3,
+        "rebac_enforcement": 3,
+        "domain_jsonld": 3,
+        "sqlite_journal": 3,
+        "zone_registry": 3,
+        "build_cache": 3,
+        "operator_overlay": 3,
+        "asset_delivery": 3,
+        "baker_lifecycle": 3,
+        "rectgtn_behavior": 3,
+        "zone_border_handoff": 3,
+        "taskweft_lean_proofs": 3,
+        "taskweft_perf": 3,
+        "openxr_simulator": 3,
+        "isolated_submodule": 0,
+        "vr_import_cache": 3,
+        "vr_lasso_test": 3,
+        "vr_lasso_s2h": 3,
+        "vr_lasso_poi_reg": 3,
+        "vr_lasso_query_pass": 0,
+        "vr_call_gui_routing": 0,
+        "vr_btn_pressed": 0,
+        "vr_slider_value": 0,
+        "zone_manifest": 0,
+        "concert_archetype": 0,
+        "ragdoll_archetype": 0,
+        "pcvr_player": 0,
+        "sandbox_rebac": 0,
+        "artifactsmmog_bot": 0,
+        "convoy_chokepoint": 0,
+        "jellyfish_demo": 0,
+        "headless_observer": 0,
+        "headless_matrix": 0,
+        "otel_tracing": 0,
+        "godot_otel_module": 3,
+        "turboquant_llm": 0,
+        "gepa_cycle": 0
       }
     },
     {
@@ -97,81 +125,226 @@
     {
       "name": "pass_condition",
       "init": {
-        "engine_boot": 0, "vrm_visible": 0, "character_steps": 0,
-        "zone_connect": 0, "all_mires": 0, "entity_slots": 0,
-        "tick_rate": 0, "clean_shutdown": 0, "lasso_query_returns_poi": 0,
-        "call_gui_input_fires": 0, "btn_pressed_fires": 0,
-        "virtual_input_fires": 0, "slider_value_changes": 0
+        "engine_boot": 0,
+        "vrm_visible": 0,
+        "character_steps": 0,
+        "zone_connect": 0,
+        "all_mires": 0,
+        "entity_slots": 0,
+        "tick_rate": 0,
+        "clean_shutdown": 0,
+        "lasso_query_returns_poi": 0,
+        "call_gui_input_fires": 0,
+        "btn_pressed_fires": 0,
+        "virtual_input_fires": 0,
+        "slider_value_changes": 0
       }
     },
     {
       "name": "scenario",
       "init": {
-        "concert": 0, "chokepoint": 0, "convoy": 0, "ragdoll": 0
+        "concert": 0,
+        "chokepoint": 0,
+        "convoy": 0,
+        "ragdoll": 0
       }
     },
     {
       "name": "stack_ready",
       "init": {
-        "engine_assembly": 1, "godot_fork": 1, "build_system": 0,
-        "zone_server": 0, "zone_registry": 1, "interest_management": 1,
-        "bots": 1, "observer": 0
+        "engine_assembly": 1,
+        "godot_fork": 1,
+        "build_system": 0,
+        "zone_server": 0,
+        "zone_registry": 1,
+        "interest_management": 1,
+        "bots": 1,
+        "observer": 0
       }
     }
   ],
   "methods": {
     "xr_dev_track": {
-      "alternatives": [{"name": "run", "subtasks": [
-        ["complete_openxr_simulator"], ["complete_vr_import_cache"],
-        ["complete_vr_lasso_test"], ["complete_vr_lasso_s2h"],
-        ["complete_vr_lasso_poi_reg"], ["complete_vr_lasso_query_pass"],
-        ["complete_vr_call_gui_routing"], ["complete_vr_btn_pressed"],
-        ["complete_vr_slider_value"]
-      ]}]
+      "alternatives": [
+        {
+          "name": "run",
+          "subtasks": [
+            [
+              "complete_openxr_simulator"
+            ],
+            [
+              "complete_vr_import_cache"
+            ],
+            [
+              "complete_vr_lasso_test"
+            ],
+            [
+              "complete_vr_lasso_s2h"
+            ],
+            [
+              "complete_vr_lasso_poi_reg"
+            ],
+            [
+              "complete_vr_lasso_query_pass"
+            ],
+            [
+              "complete_vr_call_gui_routing"
+            ],
+            [
+              "complete_vr_btn_pressed"
+            ],
+            [
+              "complete_vr_slider_value"
+            ]
+          ]
+        }
+      ]
     },
     "mmog_dev_track": {
-      "alternatives": [{"name": "run", "subtasks": [["complete_pcvr_player"]]}]
+      "alternatives": [
+        {
+          "name": "run",
+          "subtasks": [
+            [
+              "complete_pcvr_player"
+            ]
+          ]
+        }
+      ]
     },
     "demo_dev_track": {
-      "alternatives": [{"name": "run", "subtasks": [
-        ["complete_zone_manifest"], ["complete_sandbox_rebac"], ["complete_jellyfish_demo"]
-      ]}]
+      "alternatives": [
+        {
+          "name": "run",
+          "subtasks": [
+            [
+              "complete_zone_manifest"
+            ],
+            [
+              "complete_sandbox_rebac"
+            ],
+            [
+              "complete_jellyfish_demo"
+            ]
+          ]
+        }
+      ]
     },
     "ci_dev_track": {
-      "alternatives": [{"name": "run", "subtasks": [
-        ["complete_isolated_submodule"], ["complete_headless_observer"], ["complete_headless_matrix"]
-      ]}]
+      "alternatives": [
+        {
+          "name": "run",
+          "subtasks": [
+            [
+              "complete_isolated_submodule"
+            ],
+            [
+              "complete_headless_observer"
+            ],
+            [
+              "complete_headless_matrix"
+            ]
+          ]
+        }
+      ]
     },
     "rpg_dev_track": {
-      "alternatives": [{"name": "run", "subtasks": [
-        ["complete_turboquant_llm"], ["complete_artifactsmmog_bot"], ["complete_gepa_cycle"]
-      ]}]
+      "alternatives": [
+        {
+          "name": "run",
+          "subtasks": [
+            [
+              "complete_turboquant_llm"
+            ],
+            [
+              "complete_artifactsmmog_bot"
+            ],
+            [
+              "complete_gepa_cycle"
+            ]
+          ]
+        }
+      ]
     },
     "arch_dev_track": {
-      "alternatives": [{"name": "run", "subtasks": [
-        ["complete_concert_archetype"], ["complete_ragdoll_archetype"],
-        ["complete_convoy_chokepoint"], ["complete_otel_tracing"]
-      ]}]
+      "alternatives": [
+        {
+          "name": "run",
+          "subtasks": [
+            [
+              "complete_concert_archetype"
+            ],
+            [
+              "complete_ragdoll_archetype"
+            ],
+            [
+              "complete_convoy_chokepoint"
+            ],
+            [
+              "complete_otel_tracing"
+            ]
+          ]
+        }
+      ]
     },
     "complete_openxr_simulator": {
       "description": "C=5. Configure + activate. MCExecutor failure_rate models simulator not found / version mismatch.",
-      "alternatives": [{"name": "wrap", "subtasks": [["complete_item", "openxr_simulator"]]}]
+      "alternatives": [
+        {
+          "name": "wrap",
+          "subtasks": [
+            [
+              "complete_item",
+              "openxr_simulator"
+            ]
+          ]
+        }
+      ]
     },
     "complete_vr_import_cache": {
       "description": "C=1. Run godot --headless --import to populate .godot/ cache and register Canvas3D global class. Done 2026-04-29.",
-      "alternatives": [{"name": "wrap", "subtasks": [["complete_item", "vr_import_cache"]]}]
+      "alternatives": [
+        {
+          "name": "wrap",
+          "subtasks": [
+            [
+              "complete_item",
+              "vr_import_cache"
+            ]
+          ]
+        }
+      ]
     },
     "complete_vr_lasso_test": {
       "description": "C=2. Real failing assertion in test_interaction_ui.gd tests 5-6: instantiate LassoQuery, register a dummy POI, assert query result.",
       "alternatives": [
         {
           "name": "done",
-          "check": [{"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/phase/vr_lasso_test"}, "b": 3}}],
+          "check": [
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/phase/vr_lasso_test"
+                },
+                "b": 3
+              }
+            }
+          ],
           "subtasks": []
         },
         {
           "name": "direct",
-          "subtasks": [["complete_vr_import_cache"], ["complete_item", "vr_lasso_test"]]
+          "subtasks": [
+            [
+              "complete_vr_import_cache"
+            ],
+            [
+              "complete_item",
+              "vr_lasso_test"
+            ]
+          ]
         }
       ]
     },
@@ -180,12 +353,31 @@
       "alternatives": [
         {
           "name": "done",
-          "check": [{"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/phase/vr_lasso_s2h"}, "b": 3}}],
+          "check": [
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/phase/vr_lasso_s2h"
+                },
+                "b": 3
+              }
+            }
+          ],
           "subtasks": []
         },
         {
           "name": "direct",
-          "subtasks": [["complete_vr_lasso_test"], ["complete_item", "vr_lasso_s2h"]]
+          "subtasks": [
+            [
+              "complete_vr_lasso_test"
+            ],
+            [
+              "complete_item",
+              "vr_lasso_s2h"
+            ]
+          ]
         }
       ]
     },
@@ -194,12 +386,31 @@
       "alternatives": [
         {
           "name": "done",
-          "check": [{"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/phase/vr_lasso_poi_reg"}, "b": 3}}],
+          "check": [
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/phase/vr_lasso_poi_reg"
+                },
+                "b": 3
+              }
+            }
+          ],
           "subtasks": []
         },
         {
           "name": "direct",
-          "subtasks": [["complete_vr_lasso_s2h"], ["complete_item", "vr_lasso_poi_reg"]]
+          "subtasks": [
+            [
+              "complete_vr_lasso_s2h"
+            ],
+            [
+              "complete_item",
+              "vr_lasso_poi_reg"
+            ]
+          ]
         }
       ]
     },
@@ -208,15 +419,35 @@
       "alternatives": [
         {
           "name": "done",
-          "check": [{"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/phase/vr_lasso_query_pass"}, "b": 3}}],
+          "check": [
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/phase/vr_lasso_query_pass"
+                },
+                "b": 3
+              }
+            }
+          ],
           "subtasks": []
         },
         {
           "name": "direct",
           "subtasks": [
-            ["complete_vr_lasso_poi_reg"],
-            ["complete_item", "vr_lasso_query_pass"],
-            ["a_verify_pass", "lasso_query_returns_poi", "ifire"]
+            [
+              "complete_vr_lasso_poi_reg"
+            ],
+            [
+              "complete_item",
+              "vr_lasso_query_pass"
+            ],
+            [
+              "a_verify_pass",
+              "lasso_query_returns_poi",
+              "ifire"
+            ]
           ]
         }
       ]
@@ -226,16 +457,40 @@
       "alternatives": [
         {
           "name": "done",
-          "check": [{"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/phase/vr_call_gui_routing"}, "b": 3}}],
+          "check": [
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/phase/vr_call_gui_routing"
+                },
+                "b": 3
+              }
+            }
+          ],
           "subtasks": []
         },
         {
           "name": "direct",
           "subtasks": [
-            ["complete_vr_lasso_query_pass"],
-            ["complete_item", "vr_call_gui_routing"],
-            ["a_verify_pass", "call_gui_input_fires", "ifire"],
-            ["a_verify_pass", "virtual_input_fires", "ifire"]
+            [
+              "complete_vr_lasso_query_pass"
+            ],
+            [
+              "complete_item",
+              "vr_call_gui_routing"
+            ],
+            [
+              "a_verify_pass",
+              "call_gui_input_fires",
+              "ifire"
+            ],
+            [
+              "a_verify_pass",
+              "virtual_input_fires",
+              "ifire"
+            ]
           ]
         }
       ]
@@ -245,15 +500,35 @@
       "alternatives": [
         {
           "name": "done",
-          "check": [{"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/phase/vr_btn_pressed"}, "b": 3}}],
+          "check": [
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/phase/vr_btn_pressed"
+                },
+                "b": 3
+              }
+            }
+          ],
           "subtasks": []
         },
         {
           "name": "direct",
           "subtasks": [
-            ["complete_vr_call_gui_routing"],
-            ["complete_item", "vr_btn_pressed"],
-            ["a_verify_pass", "btn_pressed_fires", "ifire"]
+            [
+              "complete_vr_call_gui_routing"
+            ],
+            [
+              "complete_item",
+              "vr_btn_pressed"
+            ],
+            [
+              "a_verify_pass",
+              "btn_pressed_fires",
+              "ifire"
+            ]
           ]
         }
       ]
@@ -263,15 +538,35 @@
       "alternatives": [
         {
           "name": "done",
-          "check": [{"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/phase/vr_slider_value"}, "b": 3}}],
+          "check": [
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/phase/vr_slider_value"
+                },
+                "b": 3
+              }
+            }
+          ],
           "subtasks": []
         },
         {
           "name": "direct",
           "subtasks": [
-            ["complete_vr_btn_pressed"],
-            ["complete_item", "vr_slider_value"],
-            ["a_verify_pass", "slider_value_changes", "ifire"]
+            [
+              "complete_vr_btn_pressed"
+            ],
+            [
+              "complete_item",
+              "vr_slider_value"
+            ],
+            [
+              "a_verify_pass",
+              "slider_value_changes",
+              "ifire"
+            ]
           ]
         }
       ]
@@ -281,29 +576,85 @@
       "alternatives": [
         {
           "name": "done",
-          "check": [{"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/phase/pcvr_player"}, "b": 3}}],
+          "check": [
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/phase/pcvr_player"
+                },
+                "b": 3
+              }
+            }
+          ],
           "subtasks": []
         },
         {
           "name": "direct",
-          "subtasks": [["complete_openxr_simulator"], ["complete_item", "pcvr_player"]]
+          "subtasks": [
+            [
+              "complete_openxr_simulator"
+            ],
+            [
+              "complete_item",
+              "pcvr_player"
+            ]
+          ]
         }
       ]
     },
     "complete_zone_manifest": {
       "description": "C=6. JSON schema + endpoint.",
-      "alternatives": [{"name": "wrap", "subtasks": [["complete_item", "zone_manifest"]]}]
+      "alternatives": [
+        {
+          "name": "wrap",
+          "subtasks": [
+            [
+              "complete_item",
+              "zone_manifest"
+            ]
+          ]
+        }
+      ]
     },
     "complete_sandbox_rebac": {
       "description": "C=4. Two approaches: full RISC-V sandbox direct, OR capability_first prototype then sandbox.",
       "alternatives": [
         {
           "name": "done",
-          "check": [{"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/phase/sandbox_rebac"}, "b": 3}}],
+          "check": [
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/phase/sandbox_rebac"
+                },
+                "b": 3
+              }
+            }
+          ],
           "subtasks": []
         },
-        {"name": "direct", "subtasks": [["complete_item", "sandbox_rebac"]]},
-        {"name": "capability_first", "subtasks": [["complete_item_prototype_first", "sandbox_rebac"]]}
+        {
+          "name": "direct",
+          "subtasks": [
+            [
+              "complete_item",
+              "sandbox_rebac"
+            ]
+          ]
+        },
+        {
+          "name": "capability_first",
+          "subtasks": [
+            [
+              "complete_item_prototype_first",
+              "sandbox_rebac"
+            ]
+          ]
+        }
       ]
     },
     "complete_jellyfish_demo": {
@@ -311,35 +662,84 @@
       "alternatives": [
         {
           "name": "done",
-          "check": [{"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/phase/jellyfish_demo"}, "b": 3}}],
+          "check": [
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/phase/jellyfish_demo"
+                },
+                "b": 3
+              }
+            }
+          ],
           "subtasks": []
         },
         {
           "name": "direct",
           "subtasks": [
-            ["complete_vr_slider_value"],
-            ["complete_pcvr_player"],
-            ["complete_sandbox_rebac"],
-            ["complete_item", "jellyfish_demo"]
+            [
+              "complete_vr_slider_value"
+            ],
+            [
+              "complete_pcvr_player"
+            ],
+            [
+              "complete_sandbox_rebac"
+            ],
+            [
+              "complete_item",
+              "jellyfish_demo"
+            ]
           ]
         }
       ]
     },
     "complete_isolated_submodule": {
       "description": "C=6. Add godot-* submodule checkouts to build repo.",
-      "alternatives": [{"name": "wrap", "subtasks": [["complete_item", "isolated_submodule"]]}]
+      "alternatives": [
+        {
+          "name": "wrap",
+          "subtasks": [
+            [
+              "complete_item",
+              "isolated_submodule"
+            ]
+          ]
+        }
+      ]
     },
     "complete_headless_observer": {
       "description": "C=8. Extend existing headless_log_observer.gd.",
       "alternatives": [
         {
           "name": "done",
-          "check": [{"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/phase/headless_observer"}, "b": 3}}],
+          "check": [
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/phase/headless_observer"
+                },
+                "b": 3
+              }
+            }
+          ],
           "subtasks": []
         },
         {
           "name": "direct",
-          "subtasks": [["complete_isolated_submodule"], ["complete_item", "headless_observer"]]
+          "subtasks": [
+            [
+              "complete_isolated_submodule"
+            ],
+            [
+              "complete_item",
+              "headless_observer"
+            ]
+          ]
         }
       ]
     },
@@ -348,12 +748,31 @@
       "alternatives": [
         {
           "name": "done",
-          "check": [{"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/phase/headless_matrix"}, "b": 3}}],
+          "check": [
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/phase/headless_matrix"
+                },
+                "b": 3
+              }
+            }
+          ],
           "subtasks": []
         },
         {
           "name": "direct",
-          "subtasks": [["complete_headless_observer"], ["complete_item", "headless_matrix"]]
+          "subtasks": [
+            [
+              "complete_headless_observer"
+            ],
+            [
+              "complete_item",
+              "headless_matrix"
+            ]
+          ]
         }
       ]
     },
@@ -362,76 +781,216 @@
       "alternatives": [
         {
           "name": "done",
-          "check": [{"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/phase/turboquant_llm"}, "b": 3}}],
+          "check": [
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/phase/turboquant_llm"
+                },
+                "b": 3
+              }
+            }
+          ],
           "subtasks": []
         },
-        {"name": "compile", "subtasks": [["complete_item", "turboquant_llm"]]},
-        {"name": "prebuilt_so", "subtasks": [["complete_item_prototype_first", "turboquant_llm"]]}
+        {
+          "name": "compile",
+          "subtasks": [
+            [
+              "complete_item",
+              "turboquant_llm"
+            ]
+          ]
+        },
+        {
+          "name": "prebuilt_so",
+          "subtasks": [
+            [
+              "complete_item_prototype_first",
+              "turboquant_llm"
+            ]
+          ]
+        }
       ]
     },
     "complete_artifactsmmog_bot": {
       "description": "C=5. REST API + HTN plan + execute.",
-      "alternatives": [{"name": "wrap", "subtasks": [["complete_item", "artifactsmmog_bot"]]}]
+      "alternatives": [
+        {
+          "name": "wrap",
+          "subtasks": [
+            [
+              "complete_item",
+              "artifactsmmog_bot"
+            ]
+          ]
+        }
+      ]
     },
     "complete_gepa_cycle": {
       "description": "C=3 (research-grade). Two approaches: full ASI+Pareto OR critique_first prototype.",
       "alternatives": [
         {
           "name": "done",
-          "check": [{"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/phase/gepa_cycle"}, "b": 3}}],
+          "check": [
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/phase/gepa_cycle"
+                },
+                "b": 3
+              }
+            }
+          ],
           "subtasks": []
         },
         {
           "name": "direct",
           "subtasks": [
-            ["complete_turboquant_llm"], ["complete_artifactsmmog_bot"],
-            ["complete_item", "gepa_cycle"]
+            [
+              "complete_turboquant_llm"
+            ],
+            [
+              "complete_artifactsmmog_bot"
+            ],
+            [
+              "complete_item",
+              "gepa_cycle"
+            ]
           ]
         },
         {
           "name": "critique_first",
           "subtasks": [
-            ["complete_turboquant_llm"], ["complete_artifactsmmog_bot"],
-            ["complete_item_prototype_first", "gepa_cycle"]
+            [
+              "complete_turboquant_llm"
+            ],
+            [
+              "complete_artifactsmmog_bot"
+            ],
+            [
+              "complete_item_prototype_first",
+              "gepa_cycle"
+            ]
           ]
         }
       ]
     },
     "complete_concert_archetype": {
       "description": "C=5. Wire separatedConcertFits theorem to zone server load test.",
-      "alternatives": [{"name": "wrap", "subtasks": [["complete_item", "concert_archetype"]]}]
+      "alternatives": [
+        {
+          "name": "wrap",
+          "subtasks": [
+            [
+              "complete_item",
+              "concert_archetype"
+            ]
+          ]
+        }
+      ]
     },
     "complete_ragdoll_archetype": {
       "description": "C=5. Wire g13_vTrue / aHalfMinForearm to zone server tick test.",
-      "alternatives": [{"name": "wrap", "subtasks": [["complete_item", "ragdoll_archetype"]]}]
+      "alternatives": [
+        {
+          "name": "wrap",
+          "subtasks": [
+            [
+              "complete_item",
+              "ragdoll_archetype"
+            ]
+          ]
+        }
+      ]
     },
     "complete_convoy_chokepoint": {
       "description": "C=4. Two approaches: together OR convoy_first prototype.",
       "alternatives": [
         {
           "name": "done",
-          "check": [{"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/phase/convoy_chokepoint"}, "b": 3}}],
+          "check": [
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/phase/convoy_chokepoint"
+                },
+                "b": 3
+              }
+            }
+          ],
           "subtasks": []
         },
-        {"name": "together", "subtasks": [["complete_item", "convoy_chokepoint"]]},
-        {"name": "convoy_first", "subtasks": [["complete_item_prototype_first", "convoy_chokepoint"]]}
+        {
+          "name": "together",
+          "subtasks": [
+            [
+              "complete_item",
+              "convoy_chokepoint"
+            ]
+          ]
+        },
+        {
+          "name": "convoy_first",
+          "subtasks": [
+            [
+              "complete_item_prototype_first",
+              "convoy_chokepoint"
+            ]
+          ]
+        }
       ]
     },
     "complete_godot_otel_module": {
       "description": "C=5. Enable opentelemetry-godot engine module in SCons build.",
-      "alternatives": [{"name": "wrap", "subtasks": [["complete_item", "godot_otel_module"]]}]
+      "alternatives": [
+        {
+          "name": "wrap",
+          "subtasks": [
+            [
+              "complete_item",
+              "godot_otel_module"
+            ]
+          ]
+        }
+      ]
     },
     "complete_otel_tracing": {
       "description": "C=6. Stub spans at zone connect and packet parse. Depends on godot_otel_module.",
       "alternatives": [
         {
           "name": "done",
-          "check": [{"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/phase/otel_tracing"}, "b": 3}}],
+          "check": [
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/phase/otel_tracing"
+                },
+                "b": 3
+              }
+            }
+          ],
           "subtasks": []
         },
         {
           "name": "direct",
-          "subtasks": [["complete_godot_otel_module"], ["complete_item", "otel_tracing"]]
+          "subtasks": [
+            [
+              "complete_godot_otel_module"
+            ],
+            [
+              "complete_item",
+              "otel_tracing"
+            ]
+          ]
         }
       ]
     },
@@ -441,10 +1000,30 @@
         {
           "name": "run",
           "subtasks": [
-            ["verify_infrastructure"], ["verify_demo_pass_conditions"],
-            ["run_concert_scenario"], ["run_chokepoint_scenario"],
-            ["run_convoy_scenario"], ["run_ragdoll_scenario"],
-            ["verify_ci_pass_conditions"], ["check_win_condition"]
+            [
+              "verify_infrastructure"
+            ],
+            [
+              "verify_demo_pass_conditions"
+            ],
+            [
+              "run_concert_scenario"
+            ],
+            [
+              "run_chokepoint_scenario"
+            ],
+            [
+              "run_convoy_scenario"
+            ],
+            [
+              "run_ragdoll_scenario"
+            ],
+            [
+              "verify_ci_pass_conditions"
+            ],
+            [
+              "check_win_condition"
+            ]
           ]
         }
       ]
@@ -455,26 +1034,111 @@
         {
           "name": "done",
           "check": [
-            {"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/pass_condition/engine_boot"}, "b": 1}},
-            {"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/pass_condition/vrm_visible"}, "b": 1}},
-            {"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/pass_condition/character_steps"}, "b": 1}},
-            {"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/pass_condition/zone_connect"}, "b": 1}},
-            {"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/stack_ready/build_system"}, "b": 1}},
-            {"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/stack_ready/zone_server"}, "b": 1}}
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/pass_condition/engine_boot"
+                },
+                "b": 1
+              }
+            },
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/pass_condition/vrm_visible"
+                },
+                "b": 1
+              }
+            },
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/pass_condition/character_steps"
+                },
+                "b": 1
+              }
+            },
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/pass_condition/zone_connect"
+                },
+                "b": 1
+              }
+            },
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/stack_ready/build_system"
+                },
+                "b": 1
+              }
+            },
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/stack_ready/zone_server"
+                },
+                "b": 1
+              }
+            }
           ],
           "subtasks": []
         },
         {
           "name": "verify",
           "subtasks": [
-            ["complete_isolated_submodule"], ["complete_headless_observer"],
-            ["a_set_stack_ready", "build_system", "player_customer"],
-            ["a_verify_pass", "engine_boot", "player_customer"],
-            ["a_verify_pass", "vrm_visible", "player_customer"],
-            ["a_verify_pass", "character_steps", "player_customer"],
-            ["complete_pcvr_player"],
-            ["a_set_stack_ready", "zone_server", "player_customer"],
-            ["a_verify_pass", "zone_connect", "player_customer"]
+            [
+              "complete_isolated_submodule"
+            ],
+            [
+              "complete_headless_observer"
+            ],
+            [
+              "a_set_stack_ready",
+              "build_system",
+              "player_customer"
+            ],
+            [
+              "a_verify_pass",
+              "engine_boot",
+              "player_customer"
+            ],
+            [
+              "a_verify_pass",
+              "vrm_visible",
+              "player_customer"
+            ],
+            [
+              "a_verify_pass",
+              "character_steps",
+              "player_customer"
+            ],
+            [
+              "complete_pcvr_player"
+            ],
+            [
+              "a_set_stack_ready",
+              "zone_server",
+              "player_customer"
+            ],
+            [
+              "a_verify_pass",
+              "zone_connect",
+              "player_customer"
+            ]
           ]
         }
       ]
@@ -485,19 +1149,60 @@
         {
           "name": "done",
           "check": [
-            {"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/pass_condition/all_mires"}, "b": 1}},
-            {"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/pass_condition/entity_slots"}, "b": 1}},
-            {"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/pass_condition/tick_rate"}, "b": 1}}
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/pass_condition/all_mires"
+                },
+                "b": 1
+              }
+            },
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/pass_condition/entity_slots"
+                },
+                "b": 1
+              }
+            },
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/pass_condition/tick_rate"
+                },
+                "b": 1
+              }
+            }
           ],
           "subtasks": []
         },
         {
           "name": "verify",
           "subtasks": [
-            ["complete_jellyfish_demo"],
-            ["a_verify_pass", "all_mires", "player_customer"],
-            ["a_verify_pass", "entity_slots", "player_customer"],
-            ["a_verify_pass", "tick_rate", "player_customer"]
+            [
+              "complete_jellyfish_demo"
+            ],
+            [
+              "a_verify_pass",
+              "all_mires",
+              "player_customer"
+            ],
+            [
+              "a_verify_pass",
+              "entity_slots",
+              "player_customer"
+            ],
+            [
+              "a_verify_pass",
+              "tick_rate",
+              "player_customer"
+            ]
           ]
         }
       ]
@@ -508,17 +1213,45 @@
         {
           "name": "done",
           "check": [
-            {"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/pass_condition/clean_shutdown"}, "b": 1}},
-            {"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/stack_ready/observer"}, "b": 1}}
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/pass_condition/clean_shutdown"
+                },
+                "b": 1
+              }
+            },
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/stack_ready/observer"
+                },
+                "b": 1
+              }
+            }
           ],
           "subtasks": []
         },
         {
           "name": "verify",
           "subtasks": [
-            ["complete_headless_matrix"],
-            ["a_set_stack_ready", "observer", "player_customer"],
-            ["a_verify_pass", "clean_shutdown", "player_customer"]
+            [
+              "complete_headless_matrix"
+            ],
+            [
+              "a_set_stack_ready",
+              "observer",
+              "player_customer"
+            ],
+            [
+              "a_verify_pass",
+              "clean_shutdown",
+              "player_customer"
+            ]
           ]
         }
       ]
@@ -528,14 +1261,31 @@
       "alternatives": [
         {
           "name": "done",
-          "check": [{"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/scenario/concert"}, "b": 1}}],
+          "check": [
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/scenario/concert"
+                },
+                "b": 1
+              }
+            }
+          ],
           "subtasks": []
         },
         {
           "name": "run",
           "subtasks": [
-            ["complete_concert_archetype"],
-            ["a_verify_scenario", "concert", "player_customer"]
+            [
+              "complete_concert_archetype"
+            ],
+            [
+              "a_verify_scenario",
+              "concert",
+              "player_customer"
+            ]
           ]
         }
       ]
@@ -545,14 +1295,31 @@
       "alternatives": [
         {
           "name": "done",
-          "check": [{"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/scenario/chokepoint"}, "b": 1}}],
+          "check": [
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/scenario/chokepoint"
+                },
+                "b": 1
+              }
+            }
+          ],
           "subtasks": []
         },
         {
           "name": "run",
           "subtasks": [
-            ["complete_convoy_chokepoint"],
-            ["a_verify_scenario", "chokepoint", "player_customer"]
+            [
+              "complete_convoy_chokepoint"
+            ],
+            [
+              "a_verify_scenario",
+              "chokepoint",
+              "player_customer"
+            ]
           ]
         }
       ]
@@ -562,14 +1329,31 @@
       "alternatives": [
         {
           "name": "done",
-          "check": [{"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/scenario/convoy"}, "b": 1}}],
+          "check": [
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/scenario/convoy"
+                },
+                "b": 1
+              }
+            }
+          ],
           "subtasks": []
         },
         {
           "name": "run",
           "subtasks": [
-            ["complete_convoy_chokepoint"],
-            ["a_verify_scenario", "convoy", "player_customer"]
+            [
+              "complete_convoy_chokepoint"
+            ],
+            [
+              "a_verify_scenario",
+              "convoy",
+              "player_customer"
+            ]
           ]
         }
       ]
@@ -579,14 +1363,31 @@
       "alternatives": [
         {
           "name": "done",
-          "check": [{"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/scenario/ragdoll"}, "b": 1}}],
+          "check": [
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/scenario/ragdoll"
+                },
+                "b": 1
+              }
+            }
+          ],
           "subtasks": []
         },
         {
           "name": "run",
           "subtasks": [
-            ["complete_ragdoll_archetype"],
-            ["a_verify_scenario", "ragdoll", "player_customer"]
+            [
+              "complete_ragdoll_archetype"
+            ],
+            [
+              "a_verify_scenario",
+              "ragdoll",
+              "player_customer"
+            ]
           ]
         }
       ]
@@ -597,36 +1398,237 @@
         {
           "name": "won",
           "check": [
-            {"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/pass_condition/engine_boot"}, "b": 1}},
-            {"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/pass_condition/vrm_visible"}, "b": 1}},
-            {"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/pass_condition/character_steps"}, "b": 1}},
-            {"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/pass_condition/zone_connect"}, "b": 1}},
-            {"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/pass_condition/all_mires"}, "b": 1}},
-            {"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/pass_condition/entity_slots"}, "b": 1}},
-            {"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/pass_condition/tick_rate"}, "b": 1}},
-            {"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/pass_condition/clean_shutdown"}, "b": 1}},
-            {"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/scenario/concert"}, "b": 1}},
-            {"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/scenario/chokepoint"}, "b": 1}},
-            {"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/scenario/convoy"}, "b": 1}},
-            {"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/scenario/ragdoll"}, "b": 1}},
-            {"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/stack_ready/engine_assembly"}, "b": 1}},
-            {"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/stack_ready/godot_fork"}, "b": 1}},
-            {"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/stack_ready/build_system"}, "b": 1}},
-            {"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/stack_ready/zone_server"}, "b": 1}},
-            {"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/stack_ready/zone_registry"}, "b": 1}},
-            {"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/stack_ready/interest_management"}, "b": 1}},
-            {"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/stack_ready/bots"}, "b": 1}},
-            {"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/stack_ready/observer"}, "b": 1}}
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/pass_condition/engine_boot"
+                },
+                "b": 1
+              }
+            },
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/pass_condition/vrm_visible"
+                },
+                "b": 1
+              }
+            },
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/pass_condition/character_steps"
+                },
+                "b": 1
+              }
+            },
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/pass_condition/zone_connect"
+                },
+                "b": 1
+              }
+            },
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/pass_condition/all_mires"
+                },
+                "b": 1
+              }
+            },
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/pass_condition/entity_slots"
+                },
+                "b": 1
+              }
+            },
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/pass_condition/tick_rate"
+                },
+                "b": 1
+              }
+            },
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/pass_condition/clean_shutdown"
+                },
+                "b": 1
+              }
+            },
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/scenario/concert"
+                },
+                "b": 1
+              }
+            },
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/scenario/chokepoint"
+                },
+                "b": 1
+              }
+            },
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/scenario/convoy"
+                },
+                "b": 1
+              }
+            },
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/scenario/ragdoll"
+                },
+                "b": 1
+              }
+            },
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/stack_ready/engine_assembly"
+                },
+                "b": 1
+              }
+            },
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/stack_ready/godot_fork"
+                },
+                "b": 1
+              }
+            },
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/stack_ready/build_system"
+                },
+                "b": 1
+              }
+            },
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/stack_ready/zone_server"
+                },
+                "b": 1
+              }
+            },
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/stack_ready/zone_registry"
+                },
+                "b": 1
+              }
+            },
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/stack_ready/interest_management"
+                },
+                "b": 1
+              }
+            },
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/stack_ready/bots"
+                },
+                "b": 1
+              }
+            },
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/stack_ready/observer"
+                },
+                "b": 1
+              }
+            }
           ],
           "subtasks": []
         },
-        {"name": "not_yet", "subtasks": []}
+        {
+          "name": "not_yet",
+          "subtasks": []
+        }
       ]
     }
   },
-  "tasks": [
-    ["xr_dev_track"], ["mmog_dev_track"], ["demo_dev_track"],
-    ["ci_dev_track"], ["rpg_dev_track"], ["arch_dev_track"],
-    ["player_customer_track"]
+  "todo_list": [
+    [
+      "xr_dev_track"
+    ],
+    [
+      "mmog_dev_track"
+    ],
+    [
+      "demo_dev_track"
+    ],
+    [
+      "ci_dev_track"
+    ],
+    [
+      "rpg_dev_track"
+    ],
+    [
+      "arch_dev_track"
+    ],
+    [
+      "player_customer_track"
+    ]
   ]
 }

@@ -31,18 +31,22 @@
       }
     }
   ],
-  "goals": [
+  "todo_list": [
     {
-      "pointer": "/pos/a",
-      "eq": "table"
-    },
-    {
-      "pointer": "/pos/b",
-      "eq": "a"
-    },
-    {
-      "pointer": "/pos/c",
-      "eq": "b"
+      "goal": [
+        {
+          "pointer": "/pos/a",
+          "eq": "table"
+        },
+        {
+          "pointer": "/pos/b",
+          "eq": "a"
+        },
+        {
+          "pointer": "/pos/c",
+          "eq": "b"
+        }
+      ]
     }
   ]
 }
