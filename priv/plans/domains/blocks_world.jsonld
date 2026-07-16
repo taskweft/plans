@@ -344,16 +344,6 @@
       ]
     }
   },
-  "multigoals": {
-    "rearrange": {
-      "goal_tag": null,
-      "alternatives": [
-        {
-          "name": "move_blocks"
-        }
-      ]
-    }
-  },
   "todo_list": [
     [
       "move_one",

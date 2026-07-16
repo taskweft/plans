@@ -91,7 +91,7 @@
       ]
     },
     "exec_check": {
-      "description": "variable/get + math/ieq: read state[var][key], compare to expected. Fail (return None) on mismatch. Maps to flow/branch(false \u2192 fail).",
+      "description": "variable/get + math/ieq: read state[var][key], compare to expected. Fail (return None) on mismatch. Maps to flow/branch(false → fail).",
       "params": [
         "var",
         "key",
@@ -125,7 +125,7 @@
       ]
     },
     "register_action": {
-      "description": "Create an IPyHOP action from a sequence of bind/check/set steps. The action body is data \u2014 each step is one of the three primitives above.",
+      "description": "Create an IPyHOP action from a sequence of bind/check/set steps. The action body is data — each step is one of the three primitives above.",
       "params": [
         "name",
         "params",
@@ -221,5 +221,7 @@
       ]
     }
   },
-  "note": "This meta-domain demonstrates homoiconicity: the loader that interprets bind/check/set is itself described using bind/check/set. The three primitives (exec_bind = variable/get, exec_check = variable/get + math/ieq + flow/branch, exec_set = variable/set) are the complete standard library for state manipulation in KHR_interactivity."
+  "notes": {
+    "note": "This meta-domain demonstrates homoiconicity: the loader that interprets bind/check/set is itself described using bind/check/set. The three primitives (exec_bind = variable/get, exec_check = variable/get + math/ieq + flow/branch, exec_set = variable/set) are the complete standard library for state manipulation in KHR_interactivity."
+  }
 }
