@@ -5,7 +5,7 @@
   },
   "@type": "domain:MetaDomain",
   "name": "meta_loader",
-  "description": "The domain loader expressed as a domain. Homoiconic: the loader uses the same bind/check/set vocabulary it interprets. Each action below corresponds to a loader operation on the planner registry.",
+  "description": "The domain loader expressed as a domain. Homoiconic: the loader uses the same bind/check/set vocabulary it interprets. Each action below corresponds to a loader operation on the planner registry. This meta-domain demonstrates homoiconicity: the loader that interprets bind/check/set is itself described using bind/check/set. The three primitives (exec_bind = variable/get, exec_check = variable/get + math/ieq + flow/branch, exec_set = variable/set) are the complete standard library for state manipulation in KHR_interactivity.",
   "actions": {
     "resolve_val": {
       "description": "Resolve a {param} template as a value through enum lookup. Maps to variable/get + math/select.",
@@ -220,8 +220,5 @@
         }
       ]
     }
-  },
-  "notes": {
-    "note": "This meta-domain demonstrates homoiconicity: the loader that interprets bind/check/set is itself described using bind/check/set. The three primitives (exec_bind = variable/get, exec_check = variable/get + math/ieq + flow/branch, exec_set = variable/set) are the complete standard library for state manipulation in KHR_interactivity."
   }
 }
