@@ -218,9 +218,7 @@
           ]
         }
       ]
-    }
-  },
-  "goals": {
+    },
     "loc": {
       "description": "Goal method: travel person to desired location.",
       "params": [

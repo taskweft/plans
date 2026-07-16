@@ -154,9 +154,7 @@
           ]
         }
       ]
-    }
-  },
-  "goals": {
+    },
     "loc": {
       "description": "Goal method: move entity to desired location using m_move.",
       "params": [
