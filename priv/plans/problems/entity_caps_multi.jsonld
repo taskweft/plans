@@ -6,7 +6,7 @@
   "@type": "domain:Problem",
   "name": "entity_caps_multi",
   "source": "entity_capabilities",
-  "description": "Move drone to mountain, boat to offshore, human to city \u2014 each uses its own capability.",
+  "description": "Move drone to mountain, boat to offshore, human to city — each uses its own capability.",
   "variables": [
     {
       "name": "loc",
@@ -21,7 +21,7 @@
       }
     }
   ],
-  "tasks": [
+  "todo_list": [
     [
       "m_move",
       "drone_1",

@@ -21,34 +21,38 @@
       }
     }
   ],
-  "goals": [
+  "todo_list": [
     {
-      "pointer": "/loc/drone_1",
-      "eq": 1
-    },
-    {
-      "pointer": "/loc/drone_2",
-      "eq": 1
-    },
-    {
-      "pointer": "/loc/boat_1",
-      "eq": 2
-    },
-    {
-      "pointer": "/loc/boat_2",
-      "eq": 2
-    },
-    {
-      "pointer": "/loc/human_1",
-      "eq": 4
-    },
-    {
-      "pointer": "/loc/human_2",
-      "eq": 4
-    },
-    {
-      "pointer": "/loc/amphibious_1",
-      "eq": 6
+      "goal": [
+        {
+          "pointer": "/loc/drone_1",
+          "eq": 1
+        },
+        {
+          "pointer": "/loc/drone_2",
+          "eq": 1
+        },
+        {
+          "pointer": "/loc/boat_1",
+          "eq": 2
+        },
+        {
+          "pointer": "/loc/boat_2",
+          "eq": 2
+        },
+        {
+          "pointer": "/loc/human_1",
+          "eq": 4
+        },
+        {
+          "pointer": "/loc/human_2",
+          "eq": 4
+        },
+        {
+          "pointer": "/loc/amphibious_1",
+          "eq": 6
+        }
+      ]
     }
   ]
 }

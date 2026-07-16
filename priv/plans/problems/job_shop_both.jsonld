@@ -25,7 +25,7 @@
       }
     }
   ],
-  "tasks": [
+  "todo_list": [
     [
       "schedule_task",
       "job1_taskA",

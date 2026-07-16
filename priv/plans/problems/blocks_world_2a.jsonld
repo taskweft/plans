@@ -6,7 +6,7 @@
   "@type": "domain:Problem",
   "name": "blocks_world_2a",
   "source": "blocks_world",
-  "description": "IPyHOP blocks_world problem 2a: 4 blocks, a on c, b on d \u2192 b on c, a on d.",
+  "description": "IPyHOP blocks_world problem 2a: 4 blocks, a on c, b on d → b on c, a on d.",
   "variables": [
     {
       "name": "pos",
@@ -33,7 +33,7 @@
       }
     }
   ],
-  "tasks": [
+  "todo_list": [
     [
       "move_one",
       "a",

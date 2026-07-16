@@ -12,8 +12,12 @@
     "url": "https://linear.app/chibifire/issue/CHI-176/finish-parts-of-the-v-sekai-project-or-it-will-haunt-me-part-1",
     "gitBranchName": "feature/chi-176-finish-parts-of-the-v-sekai-project-or-it-will-haunt-me-part",
     "priority": "Urgent",
-    "blocks": ["CHI-180"],
-    "blockedBy": ["CHI-221"]
+    "blocks": [
+      "CHI-180"
+    ],
+    "blockedBy": [
+      "CHI-221"
+    ]
   },
   "stack": {
     "idtx_flow": "OpenUSD Godot adapter (https://github.com/v-sekai-multiplayer-fabric/idtx-flow-v-sekai); imports .usda → .escn and exports .escn → .usda; build-time dependency baker links against. Tracked by CHI-254.",
@@ -78,15 +82,37 @@
       "alternatives": [
         {
           "name": "done",
-          "check": [{"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/phase/idtx_flow"}, "b": 3}}],
+          "check": [
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/phase/idtx_flow"
+                },
+                "b": 3
+              }
+            }
+          ],
           "subtasks": []
         },
         {
           "name": "direct",
           "subtasks": [
-            ["complete_item", "idtx_flow"],
-            ["a_set_stack_ready", "idtx_flow", "ifire"],
-            ["a_verify_pass", "idtx_flow_roundtrip_ok", "ifire"]
+            [
+              "complete_item",
+              "idtx_flow"
+            ],
+            [
+              "a_set_stack_ready",
+              "idtx_flow",
+              "ifire"
+            ],
+            [
+              "a_verify_pass",
+              "idtx_flow_roundtrip_ok",
+              "ifire"
+            ]
           ]
         }
       ]
@@ -95,15 +121,37 @@
       "alternatives": [
         {
           "name": "done",
-          "check": [{"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/phase/crdb"}, "b": 3}}],
+          "check": [
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/phase/crdb"
+                },
+                "b": 3
+              }
+            }
+          ],
           "subtasks": []
         },
         {
           "name": "direct",
           "subtasks": [
-            ["complete_item", "crdb"],
-            ["a_set_stack_ready", "crdb", "ifire"],
-            ["a_verify_pass", "crdb_sql_ok", "ifire"]
+            [
+              "complete_item",
+              "crdb"
+            ],
+            [
+              "a_set_stack_ready",
+              "crdb",
+              "ifire"
+            ],
+            [
+              "a_verify_pass",
+              "crdb_sql_ok",
+              "ifire"
+            ]
           ]
         }
       ]
@@ -112,16 +160,40 @@
       "alternatives": [
         {
           "name": "done",
-          "check": [{"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/phase/baker"}, "b": 3}}],
+          "check": [
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/phase/baker"
+                },
+                "b": 3
+              }
+            }
+          ],
           "subtasks": []
         },
         {
           "name": "direct",
           "subtasks": [
-            ["complete_idtx_flow"],
-            ["complete_item", "baker"],
-            ["a_set_stack_ready", "baker", "ifire"],
-            ["a_verify_pass", "baker_inbox_ok", "ifire"]
+            [
+              "complete_idtx_flow"
+            ],
+            [
+              "complete_item",
+              "baker"
+            ],
+            [
+              "a_set_stack_ready",
+              "baker",
+              "ifire"
+            ],
+            [
+              "a_verify_pass",
+              "baker_inbox_ok",
+              "ifire"
+            ]
           ]
         }
       ]
@@ -130,17 +202,43 @@
       "alternatives": [
         {
           "name": "done",
-          "check": [{"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/phase/uro"}, "b": 3}}],
+          "check": [
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/phase/uro"
+                },
+                "b": 3
+              }
+            }
+          ],
           "subtasks": []
         },
         {
           "name": "direct",
           "subtasks": [
-            ["complete_crdb"],
-            ["complete_baker"],
-            ["complete_item", "uro"],
-            ["a_set_stack_ready", "uro", "ifire"],
-            ["a_verify_pass", "uro_http_ok", "ifire"]
+            [
+              "complete_crdb"
+            ],
+            [
+              "complete_baker"
+            ],
+            [
+              "complete_item",
+              "uro"
+            ],
+            [
+              "a_set_stack_ready",
+              "uro",
+              "ifire"
+            ],
+            [
+              "a_verify_pass",
+              "uro_http_ok",
+              "ifire"
+            ]
           ]
         }
       ]
@@ -149,16 +247,40 @@
       "alternatives": [
         {
           "name": "done",
-          "check": [{"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/phase/zone_a"}, "b": 3}}],
+          "check": [
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/phase/zone_a"
+                },
+                "b": 3
+              }
+            }
+          ],
           "subtasks": []
         },
         {
           "name": "direct",
           "subtasks": [
-            ["complete_uro"],
-            ["complete_item", "zone_a"],
-            ["a_set_stack_ready", "zone_a", "ifire"],
-            ["a_verify_pass", "zone_a_udp_ok", "ifire"]
+            [
+              "complete_uro"
+            ],
+            [
+              "complete_item",
+              "zone_a"
+            ],
+            [
+              "a_set_stack_ready",
+              "zone_a",
+              "ifire"
+            ],
+            [
+              "a_verify_pass",
+              "zone_a_udp_ok",
+              "ifire"
+            ]
           ]
         }
       ]
@@ -167,16 +289,40 @@
       "alternatives": [
         {
           "name": "done",
-          "check": [{"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/phase/zone_b"}, "b": 3}}],
+          "check": [
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/phase/zone_b"
+                },
+                "b": 3
+              }
+            }
+          ],
           "subtasks": []
         },
         {
           "name": "direct",
           "subtasks": [
-            ["complete_uro"],
-            ["complete_item", "zone_b"],
-            ["a_set_stack_ready", "zone_b", "ifire"],
-            ["a_verify_pass", "zone_b_udp_ok", "ifire"]
+            [
+              "complete_uro"
+            ],
+            [
+              "complete_item",
+              "zone_b"
+            ],
+            [
+              "a_set_stack_ready",
+              "zone_b",
+              "ifire"
+            ],
+            [
+              "a_verify_pass",
+              "zone_b_udp_ok",
+              "ifire"
+            ]
           ]
         }
       ]
@@ -185,15 +331,37 @@
       "alternatives": [
         {
           "name": "done",
-          "check": [{"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/phase/obs"}, "b": 3}}],
+          "check": [
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/phase/obs"
+                },
+                "b": 3
+              }
+            }
+          ],
           "subtasks": []
         },
         {
           "name": "direct",
           "subtasks": [
-            ["complete_item", "obs"],
-            ["a_set_stack_ready", "obs", "ifire"],
-            ["a_verify_pass", "obs_otlp_ok", "ifire"]
+            [
+              "complete_item",
+              "obs"
+            ],
+            [
+              "a_set_stack_ready",
+              "obs",
+              "ifire"
+            ],
+            [
+              "a_verify_pass",
+              "obs_otlp_ok",
+              "ifire"
+            ]
           ]
         }
       ]
@@ -203,31 +371,168 @@
         {
           "name": "won",
           "check": [
-            {"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/stack_ready/idtx_flow"}, "b": 1}},
-            {"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/stack_ready/crdb"}, "b": 1}},
-            {"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/stack_ready/baker"}, "b": 1}},
-            {"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/stack_ready/uro"}, "b": 1}},
-            {"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/stack_ready/zone_a"}, "b": 1}},
-            {"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/stack_ready/zone_b"}, "b": 1}},
-            {"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/stack_ready/obs"}, "b": 1}},
-            {"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/pass_condition/idtx_flow_roundtrip_ok"}, "b": 1}},
-            {"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/pass_condition/crdb_sql_ok"}, "b": 1}},
-            {"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/pass_condition/baker_inbox_ok"}, "b": 1}},
-            {"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/pass_condition/uro_http_ok"}, "b": 1}},
-            {"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/pass_condition/zone_a_udp_ok"}, "b": 1}},
-            {"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/pass_condition/zone_b_udp_ok"}, "b": 1}},
-            {"eval": {"type": "math/eq", "a": {"type": "pointer/get", "pointer": "/pass_condition/obs_otlp_ok"}, "b": 1}}
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/stack_ready/idtx_flow"
+                },
+                "b": 1
+              }
+            },
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/stack_ready/crdb"
+                },
+                "b": 1
+              }
+            },
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/stack_ready/baker"
+                },
+                "b": 1
+              }
+            },
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/stack_ready/uro"
+                },
+                "b": 1
+              }
+            },
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/stack_ready/zone_a"
+                },
+                "b": 1
+              }
+            },
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/stack_ready/zone_b"
+                },
+                "b": 1
+              }
+            },
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/stack_ready/obs"
+                },
+                "b": 1
+              }
+            },
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/pass_condition/idtx_flow_roundtrip_ok"
+                },
+                "b": 1
+              }
+            },
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/pass_condition/crdb_sql_ok"
+                },
+                "b": 1
+              }
+            },
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/pass_condition/baker_inbox_ok"
+                },
+                "b": 1
+              }
+            },
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/pass_condition/uro_http_ok"
+                },
+                "b": 1
+              }
+            },
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/pass_condition/zone_a_udp_ok"
+                },
+                "b": 1
+              }
+            },
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/pass_condition/zone_b_udp_ok"
+                },
+                "b": 1
+              }
+            },
+            {
+              "eval": {
+                "type": "math/eq",
+                "a": {
+                  "type": "pointer/get",
+                  "pointer": "/pass_condition/obs_otlp_ok"
+                },
+                "b": 1
+              }
+            }
           ],
           "subtasks": []
         },
-        {"name": "not_yet", "subtasks": []}
+        {
+          "name": "not_yet",
+          "subtasks": []
+        }
       ]
     }
   },
-  "tasks": [
-    ["complete_zone_a"],
-    ["complete_zone_b"],
-    ["complete_obs"],
-    ["check_win_condition"]
+  "todo_list": [
+    [
+      "complete_zone_a"
+    ],
+    [
+      "complete_zone_b"
+    ],
+    [
+      "complete_obs"
+    ],
+    [
+      "check_win_condition"
+    ]
   ]
 }
