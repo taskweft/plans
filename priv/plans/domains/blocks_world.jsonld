@@ -322,9 +322,7 @@
           ]
         }
       ]
-    }
-  },
-  "goals": {
+    },
     "pos": {
       "params": [
         "block",
