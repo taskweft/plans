@@ -10,6 +10,7 @@
   "variables": [
     {
       "name": "pos",
+      "type": "ref",
       "init": {
         "1": "12",
         "12": "13",
@@ -34,6 +35,7 @@
     },
     {
       "name": "clear",
+      "type": "bool",
       "init": {
         "1": true,
         "2": false,
@@ -58,12 +60,14 @@
     },
     {
       "name": "holding",
+      "type": "bool",
       "init": {
         "hand": false
       }
     },
     {
       "name": "goal_pos",
+      "type": "ref",
       "init": {
         "1": "table",
         "2": "3",

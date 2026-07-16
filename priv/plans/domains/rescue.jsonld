@@ -22,6 +22,7 @@
   "variables": [
     {
       "name": "loc",
+      "type": "int",
       "init": {
         "r1": 0,
         "w1": 1,
@@ -31,6 +32,7 @@
     },
     {
       "name": "robot_type",
+      "type": "int",
       "init": {
         "r1": 0,
         "w1": 0,
@@ -39,6 +41,7 @@
     },
     {
       "name": "has_medicine",
+      "type": "int",
       "init": {
         "a1": 0,
         "w1": 0,
@@ -47,6 +50,7 @@
     },
     {
       "name": "status",
+      "type": "int",
       "init": {
         "r1": 0,
         "w1": 0,
@@ -56,6 +60,7 @@
     },
     {
       "name": "altitude",
+      "type": "int",
       "init": {
         "a1": 0
       }

@@ -10,6 +10,7 @@
   "variables": [
     {
       "name": "phase",
+      "type": "int",
       "init": {
         "idtx_flow": 0,
         "crdb": 0,
@@ -22,6 +23,7 @@
     },
     {
       "name": "stack_ready",
+      "type": "int",
       "init": {
         "idtx_flow": 0,
         "crdb": 0,
@@ -34,6 +36,7 @@
     },
     {
       "name": "pass_condition",
+      "type": "int",
       "init": {
         "idtx_flow_roundtrip_ok": 0,
         "crdb_sql_ok": 0,

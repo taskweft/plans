@@ -21,6 +21,7 @@
   "variables": [
     {
       "name": "loc",
+      "type": "int",
       "description": "Current location of each entity. Int keys correspond to location enum values.",
       "init": {
         "drone_1": 0,
@@ -31,46 +32,40 @@
         "human_2": 0,
         "amphibious_1": 5
       }
+    },
+    {
+      "name": "capabilities",
+      "type": "ref",
+      "description": "ReBAC HAS_CAPABILITY edges: each entity holds the capabilities listed.",
+      "init": {
+        "description": "ReBAC HAS_CAPABILITY edges: each entity holds the capabilities listed. Action guards require the agent to hold all listed capabilities for that action.",
+        "entities": {
+          "drone_1": [
+            "fly"
+          ],
+          "drone_2": [
+            "fly"
+          ],
+          "boat_1": [
+            "swim"
+          ],
+          "boat_2": [
+            "swim"
+          ],
+          "human_1": [
+            "walk"
+          ],
+          "human_2": [
+            "walk"
+          ],
+          "amphibious_1": [
+            "swim",
+            "walk"
+          ]
+        }
+      }
     }
   ],
-  "capabilities": {
-    "description": "ReBAC HAS_CAPABILITY edges: each entity holds the capabilities listed. Action guards require the agent to hold all listed capabilities for that action.",
-    "entities": {
-      "drone_1": [
-        "fly"
-      ],
-      "drone_2": [
-        "fly"
-      ],
-      "boat_1": [
-        "swim"
-      ],
-      "boat_2": [
-        "swim"
-      ],
-      "human_1": [
-        "walk"
-      ],
-      "human_2": [
-        "walk"
-      ],
-      "amphibious_1": [
-        "swim",
-        "walk"
-      ]
-    },
-    "actions": {
-      "a_fly": [
-        "fly"
-      ],
-      "a_swim": [
-        "swim"
-      ],
-      "a_walk": [
-        "walk"
-      ]
-    }
-  },
   "actions": {
     "a_fly": {
       "description": "Aerial movement. Requires fly capability. Fast — no terrain restrictions.",
@@ -80,6 +75,14 @@
         "to_loc"
       ],
       "body": [
+        {
+          "eval": {
+            "type": "rebac/check",
+            "rel": "HAS_CAPABILITY",
+            "subject": "{agent}",
+            "object": "fly"
+          }
+        },
         {
           "pointer/set": "/loc/{agent}",
           "value": "{to_loc}"
@@ -95,6 +98,14 @@
       ],
       "body": [
         {
+          "eval": {
+            "type": "rebac/check",
+            "rel": "HAS_CAPABILITY",
+            "subject": "{agent}",
+            "object": "swim"
+          }
+        },
+        {
           "pointer/set": "/loc/{agent}",
           "value": "{to_loc}"
         }
@@ -108,6 +119,14 @@
         "to_loc"
       ],
       "body": [
+        {
+          "eval": {
+            "type": "rebac/check",
+            "rel": "HAS_CAPABILITY",
+            "subject": "{agent}",
+            "object": "walk"
+          }
+        },
         {
           "pointer/set": "/loc/{agent}",
           "value": "{to_loc}"

@@ -11,6 +11,7 @@
   "variables": [
     {
       "name": "phase",
+      "type": "int",
       "init": {
         "lean4_infra": 3,
         "zone_arch": 3,
@@ -58,6 +59,7 @@
     },
     {
       "name": "approach",
+      "type": "int",
       "init": {
         "vr_lasso_test": 0,
         "sandbox_rebac": 0,
@@ -68,6 +70,7 @@
     },
     {
       "name": "pass_condition",
+      "type": "int",
       "init": {
         "engine_boot": 0,
         "vrm_visible": 0,
@@ -86,6 +89,7 @@
     },
     {
       "name": "scenario",
+      "type": "int",
       "init": {
         "concert": 0,
         "chokepoint": 0,
@@ -95,6 +99,7 @@
     },
     {
       "name": "stack_ready",
+      "type": "int",
       "init": {
         "engine_assembly": 1,
         "godot_fork": 1,

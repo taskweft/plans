@@ -8,6 +8,7 @@
   "variables": [
     {
       "name": "pos",
+      "type": "ref",
       "init": {
         "a": "b",
         "b": "table",
@@ -16,6 +17,7 @@
     },
     {
       "name": "clear",
+      "type": "bool",
       "init": {
         "a": true,
         "b": false,
@@ -24,6 +26,7 @@
     },
     {
       "name": "holding",
+      "type": "bool",
       "init": {
         "hand": false
       }

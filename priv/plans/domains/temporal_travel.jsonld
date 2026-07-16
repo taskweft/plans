@@ -19,6 +19,7 @@
   "variables": [
     {
       "name": "loc",
+      "type": "int",
       "description": "Current location of each agent and taxi. -1 means in transit (taxi called, not yet arrived).",
       "init": {
         "alice": 0,
@@ -29,6 +30,7 @@
     },
     {
       "name": "cash",
+      "type": "float",
       "description": "Cash on hand per agent (float, currency units).",
       "init": {
         "alice": 20.0,
@@ -37,6 +39,7 @@
     },
     {
       "name": "owe",
+      "type": "float",
       "description": "Amount owed to taxi driver per agent (accumulated during ride).",
       "init": {
         "alice": 0.0,

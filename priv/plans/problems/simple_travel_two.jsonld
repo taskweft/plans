@@ -10,6 +10,7 @@
   "variables": [
     {
       "name": "loc",
+      "type": "int",
       "init": {
         "alice": 0,
         "bob": 1,
@@ -19,6 +20,7 @@
     },
     {
       "name": "cash",
+      "type": "float",
       "init": {
         "alice": 20.0,
         "bob": 15.0
@@ -26,6 +28,7 @@
     },
     {
       "name": "owe",
+      "type": "float",
       "init": {
         "alice": 0.0,
         "bob": 0.0

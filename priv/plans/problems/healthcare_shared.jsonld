@@ -10,6 +10,7 @@
   "variables": [
     {
       "name": "room_status",
+      "type": "int",
       "init": {
         "OR1": 0,
         "OR2": 0,
@@ -18,6 +19,7 @@
     },
     {
       "name": "room_equipment",
+      "type": "int",
       "init": {
         "OR1": 0,
         "OR2": 1,
@@ -26,6 +28,7 @@
     },
     {
       "name": "surgery_complete",
+      "type": "int",
       "init": {
         "patient1": 0,
         "patient2": 0,

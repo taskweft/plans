@@ -10,6 +10,7 @@
   "variables": [
     {
       "name": "loc",
+      "type": "int",
       "init": {
         "drone_1": 0,
         "drone_2": 0,

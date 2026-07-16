@@ -15,6 +15,7 @@
   "variables": [
     {
       "name": "task_status",
+      "type": "int",
       "init": {
         "job1_taskA": 0,
         "job1_taskB": 0,
@@ -24,6 +25,7 @@
     },
     {
       "name": "machine_avail",
+      "type": "int",
       "init": {
         "machine1": 1,
         "machine2": 1

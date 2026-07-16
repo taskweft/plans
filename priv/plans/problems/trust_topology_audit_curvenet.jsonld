@@ -10,6 +10,7 @@
   "variables": [
     {
       "name": "sections_drafted",
+      "type": "bool",
       "init": {
         "gate_inventory": false,
         "overlap_ratio": false,
@@ -21,6 +22,7 @@
     },
     {
       "name": "audit_published",
+      "type": "bool",
       "init": {
         "doc_committed": false
       }
