@@ -1,7 +1,7 @@
 defmodule Taskweft.Plans.MixProject do
   use Mix.Project
 
-  @version "0.3.0-dev.2"
+  @version "0.3.0-dev.3"
 
   def project do
     [
@@ -17,13 +17,14 @@ defmodule Taskweft.Plans.MixProject do
 
   defp deps do
     [
-      {:ex_doc, ">= 0.0.0", only: :dev, runtime: false}
+      {:ex_doc, ">= 0.0.0", only: :dev, runtime: false},
+      {:jason, "~> 1.4", only: :test, runtime: false}
     ]
   end
 
   defp package do
     [
-      files: ~w(priv mix.exs LICENSE*),
+      files: ~w(lib priv mix.exs LICENSE*),
       licenses: ["MIT"],
       links: %{"GitHub" => "https://github.com/taskweft/plans"}
     ]
